@@ -1,1 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elegance Salon</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+    }
+    h1, h2 {
+      font-family: 'Playfair Display', serif;
+    }
+    .gradient-text {
+      background: linear-gradient(to right, #ec4899, #f472b6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .footer-section {
+      padding: 2rem;
+      background-color: #be185d;
+      color: white;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      text-align: left;
+    }
+    .footer-section h3 {
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+    .footer-section ul li {
+      margin-bottom: 0.5rem;
+    }
+    .footer-section ul li a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body class="bg-pink-50 text-gray-800">
+  <!-- Header -->
+  <header class="bg-pink-600 text-white py-6 shadow-lg sticky top-0 z-50 animate__animated animate__fadeInDown">
+    <div class="container mx-auto flex justify-between items-center px-4">
+      <h1 class="text-3xl gradient-text">Elegance Salon</h1>
+      <nav>
+        <ul class="flex space-x-6">
+          <li><a href="#services" class="hover:underline">Services</a></li>
+          <li><a href="#gallery" class="hover:underline">Gallery</a></li>
+          <li><a href="#book" class="hover:underline">Book Now</a></li>
+          <li><a href="#contact" class="hover:underline">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-pink-100 to-pink-300 text-center py-20 px-6">
+    <h2 class="text-5xl font-bold mb-4 gradient-text animate__animated animate__pulse animate__infinite">Unleash Your Inner Beauty</h2>
+    <p class="text-xl mb-6 animate__animated animate__fadeInUp animate__delay-1s">Premium Hair, Skin & Beauty Treatments</p>
+    <a href="#book" class="inline-block bg-pink-600 text-white px-6 py-3 rounded-full hover:bg-pink-700 transition-all animate__animated animate__zoomIn animate__delay-2s">Book an Appointment</a>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-16 bg-white text-center">
+    <h2 class="text-4xl mb-12 gradient-text animate__animated animate__fadeIn">Our Services</h2>
+    <div class="grid md:grid-cols-4 gap-8 px-6">
+      <div data-aos="flip-left">
+        <img src="https://source.unsplash.com/300x200/?hair,salon" alt="Hair Styling" class="rounded-lg shadow-md mb-4">
+        <p class="font-semibold">Hair Styling</p>
+      </div>
+      <div data-aos="flip-left" data-aos-delay="100">
+        <img src="https://source.unsplash.com/300x200/?facial,spa" alt="Facial Treatments" class="rounded-lg shadow-md mb-4">
+        <p class="font-semibold">Facial Treatments</p>
+      </div>
+      <div data-aos="flip-left" data-aos-delay="200">
+        <img src="https://source.unsplash.com/300x200/?makeup,beauty" alt="Makeup" class="rounded-lg shadow-md mb-4">
+        <p class="font-semibold">Makeup</p>
+      </div>
+      <div data-aos="flip-left" data-aos-delay="300">
+        <img src="https://source.unsplash.com/300x200/?spa,massage" alt="Spa & Massage" class="rounded-lg shadow-md mb-4">
+        <p class="font-semibold">Spa & Massage</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="py-16 bg-pink-100">
+    <h2 class="text-4xl text-center mb-12 gradient-text animate__animated animate__fadeIn">Our Work</h2>
+    <div class="grid md:grid-cols-4 gap-4 px-6">
+      <img src="https://source.unsplash.com/300x300/?salon,hair" class="rounded-lg shadow-lg" data-aos="zoom-in">
+      <img src="https://source.unsplash.com/300x300/?beauty,makeup" class="rounded-lg shadow-lg" data-aos="zoom-in" data-aos-delay="100">
+      <img src="https://source.unsplash.com/300x300/?facial,skincare" class="rounded-lg shadow-lg" data-aos="zoom-in" data-aos-delay="200">
+      <img src="https://source.unsplash.com/300x300/?massage,spa" class="rounded-lg shadow-lg" data-aos="zoom-in" data-aos-delay="300">
+    </div>
+  </section>
+
+  <!-- Booking Section -->
+  <section id="book" class="py-16 bg-white text-center">
+    <h2 class="text-4xl mb-12 gradient-text animate__animated animate__fadeIn">Book an Appointment</h2>
+    <form class="max-w-xl mx-auto grid gap-6 animate__animated animate__fadeInUp animate__delay-1s">
+      <input type="text" placeholder="Your Name" class="px-4 py-3 border rounded">
+      <input type="email" placeholder="Your Email" class="px-4 py-3 border rounded">
+      <input type="date" class="px-4 py-3 border rounded">
+      <select class="px-4 py-3 border rounded">
+        <option>Choose Service</option>
+        <option>Hair Styling</option>
+        <option>Facial</option>
+        <option>Makeup</option>
+        <option>Spa & Massage</option>
+      </select>
+      <button type="submit" class="bg-pink-600 text-white px-6 py-3 rounded-full hover:bg-pink-700 transition-all">Book Now</button>
+    </form>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 bg-pink-200 text-center">
+    <h2 class="text-4xl mb-6 gradient-text animate__animated animate__fadeIn">Contact Us</h2>
+    <p class="animate__animated animate__fadeInUp">Email: contact@elegancesalon.com</p>
+    <p class="animate__animated animate__fadeInUp animate__delay-1s">Phone: +1 234 567 890</p>
+    <p class="animate__animated animate__fadeInUp animate__delay-2s">Location: 123 Beauty Lane, Glam City</p>
+  </section>
+
+  <!-- Footer Extended -->
+  <footer class="footer-section">
+    <div>
+      <h3>Working Hours</h3>
+      <ul>
+        <li>Mon – Wed : 10am to 8pm</li>
+        <li>Thu – Sun : 10am to 9pm</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Follow Us</h3>
+      <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Youtube</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Linkedin</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Services</h3>
+      <ul>
+        <li>Women Styling</li>
+        <li>Men Grooming</li>
+        <li>Skin care</li>
+        <li>Kerastase Rituals</li>
+        <li>Spa</li>
+        <li>Hair Extension</li>
+        <li>Scalp Treatment</li>
+        <li>Hair Treatment</li>
+        <li>Hair Colouring</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#services">Services</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/1234567890" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-transform transform hover:scale-110 animate__animated animate__fadeInUp animate__delay-3s">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16.88 3.549a9.953 9.953 0 00-12.02 1.5A9.953 9.953 0 003 12c0 1.5.354 2.918 1.03 4.195L3 21l4.805-1.025A9.953 9.953 0 0012 21c5.523 0 10-4.477 10-10 0-2.65-1.03-5.195-2.88-7.051z" />
+    </svg>
+  </a>
+
+  <script>
+    AOS.init({ duration: 1000 });
+  </script>
+</body>
+</html>
 
